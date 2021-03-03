@@ -1,5 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const destination = sequelize.define('Destination', {
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+      },
       name: DataTypes.STRING,
       img_link: DataTypes.STRING,
       distance: DataTypes.DECIMAL,
