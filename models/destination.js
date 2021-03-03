@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       distance: DataTypes.DECIMAL,
       right_asc_h: DataTypes.INTEGER,
       right_asc_m: DataTypes.INTEGER,
-      right_asc_s: DataTypes.DECIMAL,
+      right_asc_s: DataTypes.FLOAT,
       declination_d: DataTypes.INTEGER,
       declination_m: DataTypes.INTEGER,
-      declination_s: DataTypes.DECIMAL,
+      declination_s: DataTypes.FLOAT,
       radius: DataTypes.BIGINT,
       description: DataTypes.TEXT
     })
