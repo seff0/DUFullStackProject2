@@ -19,7 +19,7 @@ app.use(passport.session());
 
 // Requiring our routes
 require("./routes/user-routes.js")(app);
-require("./routes/space-routes.js")(app);
+require("./routes/destination-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
