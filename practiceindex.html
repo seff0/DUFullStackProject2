@@ -12,10 +12,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./public/assets/css/maggiecss.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button
@@ -46,7 +51,7 @@
       </div>
     </nav>
 
-    <img src="./image/logo3.png" alt="" />
+    <img class="logo" src="./image/logo3.png" alt="" />
     <br />
 
     <div class="container">
@@ -68,6 +73,7 @@
                 >
               </p>
               <input type="radio" />
+              <label for="add">Add to Itinerary</label>
             </div>
           </div>
         </div>
@@ -78,10 +84,14 @@
             <div class="card-body">
               <h5 class="card-title">Mars</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <a
+                  href="https://mars.nasa.gov/all-about-mars/facts/"
+                  target="_blank"
+                  >Read More</a
+                >
               </p>
               <input type="radio" />
+              <label for="add">Add to Itinerary</label>
             </div>
           </div>
         </div>
@@ -95,10 +105,14 @@
             <div class="card-body">
               <h5 class="card-title">Center of the Milky Way</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <a
+                  href="https://webbtelescope.org/resource-gallery/articles/pagecontent/filter-articles/what-is-the-center-of-our-galaxy-like?keyword=Stars&filterUUID=a776e097-0c60-421c-baec-1d8ad049bfb0#:~:text=The%20center%20of%20the%20Milky%20Way%2C%20roughly%20the%20inner%2010%2C000,black%20hole%20named%20Sagittarius%20A*."
+                  target="_blank"
+                  >Read More</a
+                >
               </p>
               <input type="radio" />
+              <label for="add">Add to Itinerary</label>
             </div>
           </div>
         </div>
@@ -150,7 +164,7 @@
 
     <form class="container center_div">
       <div class="form-group">
-        <label for="exampleInputEmail1">User Name</label>
+        <label for="exampleInputEmail1">Email</label>
         <input
           type="email"
           class="form-control"
@@ -172,6 +186,14 @@
       <div class="btnhelper">
         <button type="submit" class="btn btn-primary">Book Your Trip!</button>
       </div>
+      <br />
     </form>
+    <footer>
+      <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Footer</a>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
