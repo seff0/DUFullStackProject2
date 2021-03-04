@@ -12,15 +12,17 @@ module.exports = (app) => {
     //sign up a new user
     app.post("/api/signup", function(req, res) {
         db.User.create({
-            name: req.body.name,
+            email: req.body.email,
             password: req.body.password
         })
         .then(function() {
             console.log("Logging in");
-            res.redirect(307, "/user/login");
+            res.redirect(307, "/api/login");
         })
         .catch(function(err) {
-            
+            console.log("Something went wrong in user-routes!");
+            console.log(err);
+            console.log(req.body);
             res.status(401).json(err);
         });
     });
