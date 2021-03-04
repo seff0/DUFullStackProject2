@@ -26,3 +26,12 @@ img {
 .card {
     background-color: gray;
 }
+
+form {
+    margin: 80px;
+}
+
+.form-group {
+    color: white;
+}
+
