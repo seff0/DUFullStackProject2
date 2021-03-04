@@ -5,20 +5,22 @@ const passport = require("../config/passport");
 module.exports = (app) => {
     // If the user has valid login credentials, send them to the members page.
     // Otherwise the user will be sent an error
-    app.post("/user/login", passport.authenticate("local"), function(req, res) {
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
         res.json(req.user);
     });
     
     //sign up a new user
-    app.post("/user/signup", function(req, res) {
+    app.post("/api/signup", function(req, res) {
         db.User.create({
             name: req.body.name,
             password: req.body.password
         })
         .then(function() {
-            res.redirect(307, "/api/login");
+            console.log("Logging in");
+            res.redirect(307, "/user/login");
         })
         .catch(function(err) {
+            
             res.status(401).json(err);
         });
     });
@@ -31,7 +33,7 @@ module.exports = (app) => {
     });
     
     //get the user's current trip
-    app.get("/user/current_trip", function(req, res) {
+    app.get("/api/current_trip", function(req, res) {
         if (!req.user) {
             // The user is not logged in, send back an empty object
             res.json({});
@@ -46,7 +48,7 @@ module.exports = (app) => {
     });
     
     //get the user's favorite locations
-    app.get("/user/fav_locs", function(req, res) {
+    app.get("/api/fav_locs", function(req, res) {
         if (!req.user) {
             // The user is not logged in, send back an empty object
             res.json({});
