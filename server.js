@@ -10,6 +10,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+require("./routes/destination-routes.js")(app);
+
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 });
