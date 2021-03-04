@@ -1,5 +1,5 @@
 const db = require("../models");
-
-// all get and post routes will go here
+// Requiring our passport as we've configured it
+const passport = require("../config/passport");
 
 module.exports = (app) => {};

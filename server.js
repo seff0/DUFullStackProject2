@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // use sessions to keep track of user login sessions
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(session({ secret: "not very secret", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
