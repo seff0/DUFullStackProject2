@@ -4,7 +4,7 @@ const session = require("express-session");
 const passport = require("./config/passport");
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 const db = require("./models");
 
@@ -18,6 +18,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
+require("./routes/html-routes.js")(app);
 require("./routes/user-routes.js")(app);
 require("./routes/destination-routes.js")(app);
 
