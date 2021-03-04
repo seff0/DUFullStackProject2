@@ -27,11 +27,13 @@ img {
     background-color: gray;
 }
 
-form {
-    margin: 80px;
+
+.center_div {
+    margin: 0 auto;
+    width: 60%
+        /* value of your choice which suits your alignment */
 }
 
-.form-group {
-    color: white;
+.btnhelper {
+    text-align: center;
 }
-
