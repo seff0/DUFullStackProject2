@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       name: DataTypes.STRING,
       img_link: DataTypes.STRING,
-      distance: DataTypes.DECIMAL,
+      distance: DataTypes.DOUBLE,
       right_asc_h: DataTypes.INTEGER,
       right_asc_m: DataTypes.INTEGER,
       right_asc_s: DataTypes.FLOAT,
