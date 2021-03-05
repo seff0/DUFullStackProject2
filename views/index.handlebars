@@ -1,124 +1,118 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><img src="/assets/images/galaxy_logo.png" alt="Galaxy logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="submit" class="btn btn-primary" id="button">Book Your
+                                Trip!</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="submit" class="btn btn-primary" id="button">Contact
+                                the Team</button></a>
+                    </li>
+                    <li><img class="socialmedia" src="/assets/images/instagram logo.jpg" alt="Instagram logo"></li>
+                    <li><img class="socialmedia" src="/assets/images/facebook.jpg" alt="Facebook logo"></li>
+                    <li><img class="socialmedia" src="/assets/images/twitter.png" alt="Twitter logo"></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="slideshow">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/assets/images/underground.jpg" id="img1" class="d-block w-100" alt="Passenger holding area.">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Patrons waiting for the space shuttle to arrive</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/underground2.jpg" id="img2" class="d-block w-100"
+                    alt="View from interior of space car.">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>State of the art space shuttles</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/images/underground3.jpg" class="d-block w-100" alt="Interior of space car with map.">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Enjoy views of the Milky Way through double-plated windows</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </div>
-        </div>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</nav>
-
-<img src="./image/logo3.png" alt="" />
-<br />
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="./image/stephenson 2-18.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Stephenson 2-18</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Stephenson_2-18" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="./image/mars.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Mars</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up
-                        the bulk of the card's content.
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="./image/galactic center.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Center of the Milky Way</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up
-                        the bulk of the card's content.
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up
-                        the bulk of the card's content.
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up
-                        the bulk of the card's content.
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up
-                        the bulk of the card's content.
-                    </p>
-                    <input type="radio" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
 </div>
+<div class="divider">
+    <h1>SPACE JUNKY REVIEWS</h1>
+    <div class="container"></div>
+    <div class="container">
+        <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
 
-<form class="container center_div">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email" />
+            <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+                <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false"></h1>
+            </div>
+            <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+                <li class="clr-text">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="wpx-100 img-round mgb-20"
+                        title="" alt="" data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false">" On Mars we would say....Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae. "</p>
+                    <h5 class="clr-text">Seth Hill</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Mars 0.60876</small>
+                </li>
+                <li class="clr-text">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="wpx-100 img-round mgb-20"
+                        title="" alt="" data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false">" WOW! Incredible! As a first time spacer this
+                        was an absolute treat. I wasn't sure what to expect when I heard all the buzzs but it far
+                        surpassed my expectations. Thanks, Galaxy Getaway! "</p>
+                    <h5 class="clr-text">Benjamin Machock</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l">Colorado, Earth</small>
+                </li>
+                <li class="clr-text">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="wpx-100 img-round mgb-20"
+                        title="" alt="" data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false">" I had been on one other space excursion. It
+                        was ok but Galaxy Getaways was awesome! Now I know why my friends said it was beyond belief.
+                        They have state of the art equipment, including the Telescope 3000 and the conductors are so
+                        knowlegable. "</p>
+                    <h5 class="clr-text">Leonardo Silva</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Colorado,
+                        Earth</small>
+                </li>
+            </ul>
+        </div>
+        <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false"></h1>
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-    </div>
-    <br />
-    <div class="btnhelper">
-        <button type="submit" class="btn btn-primary">Book Your Trip!</button>
-    </div>
-    <br />
-</form>
+
+</div>
