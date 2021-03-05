@@ -127,3 +127,13 @@ img {
 .font-cond-b {
   font-weight: 700 !important;
 }
+
+.content-contact {
+  margin: auto;
+  margin-top: 50px;
+  width: 70%;
+  background-color: rgb(21, 21, 29);
+  padding: 20px;
+  opacity: 0.8;
+  box-shadow: 20px 20px 20px rgb(21, 21, 29);
+}
