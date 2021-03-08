@@ -34,16 +34,18 @@ $(document).ready(function () {
     passwordInput.val("");
   });
   
-  function checkExistingUser(email, password, choices){
-    $.post("/api/exists", {email: email}).then(exists => {
+  function checkExistingUser(usemail, password, choices){
+    $.post("/api/exists", {email: usemail}).then(exists => {
       if(exists){
-        $.post("/api/login", {email: email, password: password})
+        $.post("/api/login", {email: usemail, password: password})
         .then(user => {
-          user.update({current_trip: choices});
+          $.post("/api/update-trips", {email: user.email, trip: choices});
+          
         })
         .then(() => {
           window.location.replace("/trip");
         })
+        
         .catch(handleExistsErr);
       }
       else{

@@ -33,7 +33,7 @@ module.exports = (app) => {
   app.post("/api/exists", function(req, res){
       db.User.findAll(
           {
-              where: {email: req.email}
+              where: {email: req.body.email}
           }
       ).then(data => {
           if(data.length > 0){
@@ -43,6 +43,18 @@ module.exports = (app) => {
               res.json(false);
           }
       })
+  })
+  
+  //update a user's trips
+  app.post("/api/update-trips", function(req, res){
+      console.log(req.body);
+      db.User.update(
+          {
+            current_trip: req.body.trip
+          },
+          {
+            where: {email: req.body.email},
+          })
   })
   
   // Route for logging user out
