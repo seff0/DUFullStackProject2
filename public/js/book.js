@@ -4,8 +4,6 @@ $(document).ready(function () {
   var emailInput = $("#inputEmail");
   var passwordInput = $("#inputPassword");
 
-  const checks = document.getElementsByName("check-select");
-
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function (event) {
     event.preventDefault();
