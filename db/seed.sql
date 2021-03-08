@@ -2,7 +2,7 @@ USE destinations_db;
 
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("Stephenson 2-18",
-      "https://en.wikipedia.org/wiki/File:Stephenson_2-18_zoomed_in,_2MASS_survey,_2003.png",
+      "/assets/images/stephenson-2-18.png",
       178794000,
       18,
       39,
@@ -15,7 +15,7 @@ VALUES ("Stephenson 2-18",
 
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("Mars",
-      "https://en.wikipedia.org/wiki/File:OSIRIS_Mars_true_color.jpg",
+      "/assets/images/mars.jpg",
       225000000,
       3,
       48,
@@ -28,7 +28,7 @@ VALUES ("Mars",
       
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("Center of the Milky Way",
-      "https://www.nasa.gov/sites/default/files/thumbnails/image/gc_tumblr.png",
+      "/assets/images/galactic-core.png",
       252300000000000000,
       17,
       45,
@@ -40,7 +40,7 @@ VALUES ("Center of the Milky Way",
       "The center of the Milky Way galaxy is a massive and dense cloud of gas and dust that forms massive new stars over time. At its very core is a supermassive black hole known as Sagittarius A*. There are still many mysteries associated with this region of our galaxy, but astronomers are determined to one day unlock its secrets!");
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("Carina Nebula",
-      "https://upload.wikimedia.org/wikipedia/commons/7/70/Carina_Nebula_by_Harel_Boren*%28151851961%2C_modified%29.jpg",
+      "/assets/images/carina-nebula.jpg",
       80416209016900000,
       10,
       45,
@@ -52,7 +52,7 @@ VALUES ("Carina Nebula",
       "The Carina Nebula is a large, complex area of bright and dark nebulosity located in the Carina-Sagittarius arm of the Milky Way. This nebula has within its boundaries several related star clusters, and is home to WR 25, the brightest star in our galaxy to date. The Carina Nebula is one of the largest diffuse nebulae in our skies, four times as large and even brighter than the famous Orion Nebula!");
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("Kepler-186f",
-      "https://www.nasa.gov/sites/default/files/kepler186f_artistconcept_2.jpg",
+      "/assets/images/kepler-186f.jpg",
       4654679392600000,
       19,
       54,
@@ -64,7 +64,7 @@ VALUES ("Kepler-186f",
       "Kepler-186f is an exoplanet orbiting the red star Kepler-186, and is the first planet with a radius similar to Earth to be discovered in the habitable zone of its host star. Kepler-186f's host star is younger and much cooler than our Sun, and Kepler-186f orbits much closer to its host star than Earth does. Kepler-186f's orbit is 60% smaller than Earth's, and takes only 129.9 days to complete!");
 INSERT INTO destinations (name, img_link, distance, right_asc_h, right_asc_m, right_asc_s, declination_d, declination_m, declination_s, radius, description)
 VALUES ("NGC 1999",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ngc1999.jpg/1280px-Ngc1999.jpg",
+      "/assets/images/Ngc1999.jpg",
       14191095708870000,
       05,
       36,
@@ -73,4 +73,4 @@ VALUES ("NGC 1999",
       43,
       18,
       2838219000000,
-      "NGC 1999 is a dust-filled, bright refraction nebula with a peculiar black patch near its center. This nebula refracts the light of the star V380 Orionis, but the contents of the dark patch are what attract many scientists to this corner of space. Analysis of the patch by the Atacama Pathfinder Experiment radio telescope and the Mayall and Magellan telescopes have concluded the dark patch in this nebula is not a dense cloud of dust and gas, but instead is truly empty.");
+      "NGC 1999 is a dust-filled, bright refraction nebula with a peculiar black patch near its center. This nebula refracts the light of the star V380 Orionis, but the contents of the dark patch are what attract many scientists to this corner of space. Analysis of the patch by the Atacama Pathfinder Experiment radio telescope and the Mayall and Magellan telescopes have concluded the dark patch in this nebula is not a dense cloud of dust and gas, but instead is simply empty.");
