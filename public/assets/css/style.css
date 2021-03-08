@@ -128,9 +128,6 @@ img {
   font-weight: 700 !important;
 }
 
-<<<<<<< HEAD
-
-
 /* mags code */
 
 p {
@@ -152,12 +149,11 @@ p {
   margin-right: auto;
   margin-top: 20px;
   padding-top: 60px;
-
 }
 
 .mcontainer {
   color: white;
-  opacity: .8;
+  opacity: 0.8;
   float: none;
 }
 
@@ -165,11 +161,10 @@ p {
   background-color: gray;
 }
 
-
 .center_div {
   margin: 0 auto;
-  width: 60%
-    /* value of your choice which suits your alignment */
+  width: 60%;
+  /* value of your choice which suits your alignment */
 }
 
 .btnhelper {
@@ -191,7 +186,6 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-=======
 .content-contact {
   margin: auto;
   margin-top: 50px;
@@ -201,4 +195,3 @@ a {
   opacity: 0.8;
   box-shadow: 20px 20px 20px rgb(21, 21, 29);
 }
->>>>>>> main
