@@ -29,7 +29,7 @@ $(document).ready(function() {
             password: password
         })
         .then(function(data) {
-            window.location.replace("/members"); //should point to the page that runs the user's trip
+            window.location.replace("/trip"); //should point to the page that runs the user's trip
             // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);

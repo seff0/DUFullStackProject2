@@ -50,7 +50,7 @@ module.exports = (app) => {
     });
     
     //get the user's favorite locations
-    app.get("/api/fav_locs", function(req, res) {
+    app.get("/favorites", function(req, res) {
         if (!req.user) {
             // The user is not logged in, send back an empty object
             res.json({});
@@ -58,9 +58,10 @@ module.exports = (app) => {
             // Otherwise send back the user's favorite locations
             // fav_locs should be an array of ids (each id corresponding to a location) separated by commas w/o spaces
             // eg "1,3,5,6"
-            res.json({
-                fav_locs: req.user.fav_locs
-            });
+            // res.json({
+            //     fav_locs: req.user.fav_locs
+            // });
+            res.render("favorites", {name: req.user.email, fav_locs: req.user.fav_locs});
         }
     });
 };
