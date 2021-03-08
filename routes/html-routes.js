@@ -11,7 +11,7 @@ module.exports = (router) => {
   router.get("/book", (req, res) => {
     db.Destination.findAll({
       raw: true,
-      attributes: ["id", "name", "img_link"],
+      attributes: ["id", "name", "img_link", "info_link"],
     }).then((data) => {
       const dataObj = {
         destination: data,
@@ -21,8 +21,14 @@ module.exports = (router) => {
   });
 
   router.get("/trip", (req, res) => {
-    //this will show their trip, for now will redirect to where we want to test
-    return res.render("trip"); //just for testing, send them to the favorites page
+    db.Destination.findAll({
+      raw: true,
+    }).then((data) => {
+      const dataObj = {
+        destination: data,
+      };
+      res.render("trip", dataObj);
+    });
   });
 
   router.get("/end", (req, res) => {
@@ -30,16 +36,41 @@ module.exports = (router) => {
   });
 
   router.get("/favorites", (req, res) => {
-    // need to query db for user's favorite destinations
-    return res.render("favorites");
+    db.User.findAll({
+      raw: true,
+      where: {
+        email: req.user.email,
+      },
+    })
+      .then((data) => {
+        console.log(data);
+        queries = data[0].fav_locs.split(",").map(Number);
+        console.log(queries);
+        return queries;
+      })
+
+      .then((queries) => {
+        db.Destination.findAll({
+          raw: true,
+          where: {
+            id: queries,
+          },
+        }).then((data) => {
+          const dataObj = {
+            destination: data,
+          };
+          console.log(dataObj);
+          res.render("favorites", dataObj);
+        });
+      });
   });
 
   router.get("/contact", (req, res) => {
     return res.render("contact");
   });
 
-  // app.get("/login", function(req, res) {
-  //   // If the user already has an account send them to the members page
+  // app.get("/login", function (req, res) {
+  //   //   // If the user already has an account send them to the members page
   //   if (req.user) {
   //     res.redirect("/members");
   //   }

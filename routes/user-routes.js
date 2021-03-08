@@ -15,6 +15,7 @@ module.exports = (app) => {
       email: req.body.email,
       password: req.body.password,
       current_trip: req.body.trip,
+      fav_locs: "1,2,5,6",
     })
       .then(function () {
         console.log("Logging in");
