@@ -5,18 +5,37 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = (router) => {
   router.get("/", (req, res) => {
-    db.Destination.findAll().then((data) => {
-      const dataObj = { destinations: data };
-      return res.render("index", dataObj);
-    });
+    return res.render("index");
   });
 
   router.get("/book", (req, res) => {
-    res.render("selection", {});
+    db.Destination.findAll({
+      raw: true,
+    }).then((data) => {
+      const dataObj = {
+        destination: data,
+      };
+      console.log("hit /book");
+      res.render("selection", dataObj);
+    });
   });
 
-  router.get("/trip", (req, res) => { //this will show their trip, for now will redirect to where we want to test
-    res.redirect("/favorites") //just for testing, send them to the favorites page
+  router.get("/trip", (req, res) => {
+    //this will show their trip, for now will redirect to where we want to test
+    res.redirect("/favorites"); //just for testing, send them to the favorites page
+  });
+
+  router.get("/end", (req, res) => {
+    return res.render("end");
+  });
+
+  router.get("/favorites", (req, res) => {
+    // need to query db for user's favorite destinations
+    return res.render("favorites");
+  });
+
+  router.get("/contact", (req, res) => {
+    return res.render("contact");
   });
 
   // app.get("/login", function(req, res) {
@@ -32,5 +51,4 @@ module.exports = (router) => {
   // app.get("/members", isAuthenticated, function (req, res) {
   //   res.sendFile(path.join(__dirname, "../public/trip.html"));
   // });
-}
-
+};

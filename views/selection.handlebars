@@ -23,88 +23,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/stephenson 2-18.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Stephenson 2-18</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Stephenson_2-18" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/mars.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Mars</h5>
-                    <p class="card-text">
-                        <a href="https://mars.nasa.gov/all-about-mars/facts/" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/galactic center.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Center of the Milky Way</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Omega_Nebula" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/lenticulargalaxy.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Lenticular Galaxy</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Lenticular_galaxy" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/omega.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Omega Nebula</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Omega_Nebula" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="assets/images/redspot.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Great Red Spot</h5>
-                    <p class="card-text">
-                        <a href="https://en.wikipedia.org/wiki/Great_Red_Spot" target="_blank">Read More</a>
-                    </p>
-                    <input type="radio" />
-                    <label for="add">Add to Itinerary</label>
-                </div>
-            </div>
-        </div>
+        {{#each destination}}
+        {{> dest/dest-block}}
+        {{/each}}
     </div>
     <br />
 </div>
