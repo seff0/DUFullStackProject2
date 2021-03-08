@@ -41,6 +41,9 @@ $(document).ready(function () {
         .then(user => {
           user.update({current_trip: choices});
         })
+        .then(() => {
+          window.location.replace("/trip");
+        })
         .catch(handleExistsErr);
       }
       else{
