@@ -28,11 +28,26 @@ $(document).ready(function () {
     choices += getChecked();
 
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, choices);
+    checkExistingUser(userData.email, userData.password, choices);
+    
     emailInput.val("");
     passwordInput.val("");
   });
-
+  
+  function checkExistingUser(email, password, choices){
+    $.post("/api/exists", {email: email}).then(exists => {
+      if(exists){
+        $.post("/api/login", {email: email, password: password})
+        .then(user => {
+          user.update({current_trip: choices});
+        })
+        .catch(handleExistsErr);
+      }
+      else{
+        signUpUser(email, password, choices);
+      }
+    })
+  }
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(email, password, trip) {
@@ -52,5 +67,10 @@ $(document).ready(function () {
   function handleLoginErr(err) {
     console.log("Error logging in");
     $("#alert .msg").text(err.responseJSON);
+  }
+  
+  function handleExistsErr(){
+    console.log("User already exists");
+    $("#alert .msg").text("That email is already in use.")
   }
 });

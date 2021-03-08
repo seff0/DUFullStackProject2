@@ -28,7 +28,23 @@ module.exports = (app) => {
         res.status(401).json(err);
       });
   });
-
+  
+  //check if a user exists
+  app.post("/api/exists", function(req, res){
+      db.User.findAll(
+          {
+              where: {email: req.email}
+          }
+      ).then(data => {
+          if(data.length > 0){
+              res.json(true);
+          }
+          else{
+              res.json(false);
+          }
+      })
+  })
+  
   // Route for logging user out
   app.get("/logout", function (req, res) {
     req.logout();
