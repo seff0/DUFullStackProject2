@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/seff0/DUFullStackProject2/issues"
   },
-  "homepage": "https://github.com/seff0/DUFullStackProject2#readme"
+  "homepage": "https://github.com/seff0/DUFullStackProject2#readme",
+  "devDependencies": {}
 }

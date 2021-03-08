@@ -22,7 +22,7 @@ module.exports = (router) => {
 
   router.get("/trip", (req, res) => {
     //this will show their trip, for now will redirect to where we want to test
-    res.redirect("/favorites"); //just for testing, send them to the favorites page
+    return res.render("trip"); //just for testing, send them to the favorites page
   });
 
   router.get("/end", (req, res) => {

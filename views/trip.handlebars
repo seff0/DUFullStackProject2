@@ -26,10 +26,27 @@
 
 <button class="fav">Next Site!</button>
 
-<footer>
-    <nav class="navbar fixed-bottom navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Footer</a>
+<div class="container">
+    <div class"row">
+        <h1>Your Getaway Galaxy trip!</h1>
+    </div>
+    <div class="row">
+        {{!-- for each site selected should populate on the trip page --}}
+        <div class="container">
+            <div class="row">
+                {{#each destination}}
+                {{> dest/dest-block}}
+                {{/each}}
+            </div>
+
+
         </div>
-    </nav>
-</footer>
+    </div>
+
+    {{!-- <footer>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Footer</a>
+            </div>
+        </nav>
+    </footer> --}}

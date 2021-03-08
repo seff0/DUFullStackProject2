@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-const exphbs = require('express-handlebars');
+const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
