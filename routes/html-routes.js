@@ -11,18 +11,41 @@ module.exports = (router) => {
   router.get("/book", (req, res) => {
     db.Destination.findAll({
       raw: true,
+      attributes: ["id", "name", "img_link", "info_link"],
     }).then((data) => {
       const dataObj = {
         destination: data,
       };
-      console.log("hit /book");
       res.render("selection", dataObj);
     });
   });
 
   router.get("/trip", (req, res) => {
-    //this will show their trip, for now will redirect to where we want to test
-    return res.render("trip"); //just for testing, send them to the favorites page
+    db.User.findAll({
+      raw: true,
+      where: {
+        email: req.user.email,
+      },
+    })
+      .then((data) => {
+        console.log(data);
+        queries = data[0].current_trip.split(",").map(Number);
+        return queries;
+      })
+
+      .then((queries) => {
+        db.Destination.findAll({
+          raw: true,
+          where: {
+            id: queries,
+          },
+        }).then((data) => {
+          const dataObj = {
+            destination: data,
+          };
+          res.render("trip", dataObj);
+        });
+      });
   });
 
   router.get("/end", (req, res) => {
@@ -30,21 +53,50 @@ module.exports = (router) => {
   });
 
   router.get("/favorites", (req, res) => {
-    // need to query db for user's favorite destinations
-    return res.render("favorites");
-  });
+    if(req.user){
+      
+    db.User.findAll({
+      raw: true,
+      where: {
+        email: req.user.email,
+      },
+    })
+      .then((data) => {
+        console.log(data);
+        queries = data[0].fav_locs.split(",").map(Number);
+        return queries;
+      })
+
+      .then((queries) => {
+        db.Destination.findAll({
+          raw: true,
+          where: {
+            id: queries,
+          },
+        }).then((data) => {
+          const dataObj = {
+            destination: data,
+          };
+          res.render("favorites", dataObj);
+        });
+      });
+  }
+  else {
+    res.redirect("/login");
+  }
+});
 
   router.get("/contact", (req, res) => {
     return res.render("contact");
   });
 
-  // app.get("/login", function(req, res) {
-  //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.redirect("/members");
-  //   }
-  //   res.sendFile(path.join(__dirname, "../public/practiceindex.html"));
-  // });
+  router.get("/login", function (req, res) {
+    //   // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/favorites");
+    }
+    res.render("login", {});
+  });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page

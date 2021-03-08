@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "SQLrootpass2",
     "database": "destinations_db",
     "host": "127.0.0.1",
     "port": 3306,
@@ -22,6 +22,7 @@
     "database": "heroku_53db1bc03b23a3b",
     "host": "us-cdbr-east-03.cleardb.com",
     "port": 3306,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {"timestamps": false}
   }
 }
