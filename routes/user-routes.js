@@ -28,7 +28,35 @@ module.exports = (app) => {
         res.status(401).json(err);
       });
   });
-
+  
+  //check if a user exists
+  app.post("/api/exists", function(req, res){
+      db.User.findAll(
+          {
+              where: {email: req.body.email}
+          }
+      ).then(data => {
+          if(data.length > 0){
+              res.json(true);
+          }
+          else{
+              res.json(false);
+          }
+      })
+  })
+  
+  //update a user's trips
+  app.post("/api/update-trips", function(req, res){
+      console.log(req.body);
+      db.User.update(
+          {
+            current_trip: req.body.trip
+          },
+          {
+            where: {email: req.body.email},
+          })
+  })
+  
   // Route for logging user out
   app.get("/logout", function (req, res) {
     req.logout();
