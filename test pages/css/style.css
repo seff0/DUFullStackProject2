@@ -144,3 +144,7 @@ img {
 .font-cond-b {
   font-weight: 700 !important;
 }
+
+.place {
+  padding: 200px;
+}
