@@ -53,6 +53,8 @@ module.exports = (router) => {
   });
 
   router.get("/favorites", (req, res) => {
+    if(req.user){
+      
     db.User.findAll({
       raw: true,
       where: {
@@ -78,19 +80,23 @@ module.exports = (router) => {
           res.render("favorites", dataObj);
         });
       });
-  });
+  }
+  else {
+    res.redirect("/login");
+  }
+});
 
   router.get("/contact", (req, res) => {
     return res.render("contact");
   });
 
-  // app.get("/login", function (req, res) {
-  //   //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.redirect("/members");
-  //   }
-  //   res.sendFile(path.join(__dirname, "../public/practiceindex.html"));
-  // });
+  router.get("/login", function (req, res) {
+    //   // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/favorites");
+    }
+    res.render("login", {});
+  });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
