@@ -1,13 +1,28 @@
-<div class="col-lg-4 d-flex align-items-stretch">
-    <div class="card" style="width: 18rem; height: 30rem" data-id="{{id}}">
-        <img src="{{img_link}}" class="card-img-top" alt="..." />
-        <div class="card-body">
-            <h5 class="card-title">{{name}}</h5>
-            <p class="card-text">
-                <a href="{{info_link}}" target="_blank">Read More</a>
-            </p>
-            <input type="checkbox" name="check-select" data-id="{{this.id}}" value="{{this.name}}" />
-            <label for="add">Add to Itinerary</label>
+<div class="card mb-3" style="max-width: 100%">
+    <div class="row g-0">
+        <div class="col-lg-8">
+            <img src="{{img_link}}" alt="{{name}}" class="img-fluid">
+        </div>
+        <div class="col-lg-4">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text text-left">
+                    Distance from Earth: {{distance}} meters
+                    <br>
+                    Right Ascension: {{right_asc_h}}<sup>h</sup>{{right_asc_m}}<sup>m</sup>{{right_asc_s}}<sup>s</sup>
+                    <br>
+                    Declination: {{declination_d}}°{{declination_m}}<sup>m</sup>{{declination_s}}<sup>s</sup>
+                    <br>
+                    Radius: {{radius}} meters
+                    <br>
+                    {{description}}
+                    <br>
+                    <br>
+                    <a href="{{info_link}}" target="_blank">Read More</a>
+                </p>
+                <input type="checkbox" name="check-select" data-id="{{this.id}}" value="{{this.name}}" />
+                <label for="add">Save this to my favorites!</label>
+            </div>
         </div>
     </div>
 </div>
