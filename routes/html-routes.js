@@ -11,11 +11,11 @@ module.exports = (router) => {
   router.get("/book", (req, res) => {
     db.Destination.findAll({
       raw: true,
+      attributes: ["id", "name", "img_link"],
     }).then((data) => {
       const dataObj = {
         destination: data,
       };
-      console.log("hit /book");
       res.render("selection", dataObj);
     });
   });
