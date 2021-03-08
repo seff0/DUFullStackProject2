@@ -19,42 +19,32 @@ $(document).ready(function () {
       return;
     }
 
+    // grabbing all checked checkboxes to post to user
     let choices = "";
-
     function getChecked() {
       return $.map(
         $("input[name=check-select]:checked"),
         (elem) => elem.dataset.id
       );
     }
-
     choices += getChecked();
 
-    // for (i = 0; i < 6; i++) {
-    //   if (checks[i].checked) {
-    //     let checkID = checks[i].data("id");
-    //     choices += checkID + ",";
-    //   }
-    // }
-
-    console.log(choices);
-
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, choices);
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(email, password, trip) {
     $.post("/api/signup", {
       email: email,
       password: password,
+      trip: trip,
     })
       .then(function (data) {
-        // window.location.replace("/trip");
-        console.log("logged in");
+        window.location.replace("/trip");
         //should point to the page that runs the user's trip
         // If there's an error, handle it by throwing up a bootstrap alert
       })
