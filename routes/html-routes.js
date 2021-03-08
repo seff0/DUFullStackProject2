@@ -36,6 +36,8 @@ module.exports = (router) => {
   });
 
   router.get("/favorites", (req, res) => {
+    if(req.user){
+      
     db.User.findAll({
       raw: true,
       where: {
@@ -63,13 +65,17 @@ module.exports = (router) => {
           res.render("favorites", dataObj);
         });
       });
-  });
+  }
+  else {
+    res.redirect("/login");
+  }
+});
 
   router.get("/contact", (req, res) => {
     return res.render("contact");
   });
 
-  app.get("/login", function (req, res) {
+  router.get("/login", function (req, res) {
     //   // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/favorites");
