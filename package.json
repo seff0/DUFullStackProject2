@@ -17,5 +17,14 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sequelize": "^6.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seff0/DUFullStackProject2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/seff0/DUFullStackProject2/issues"
+  },
+  "homepage": "https://github.com/seff0/DUFullStackProject2#readme"
 }
