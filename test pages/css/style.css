@@ -23,13 +23,14 @@ header {
   clear: both;
 }
 
-.content-contact {
+.content-contact,
+.content-end {
   margin: auto;
   margin-top: 50px;
   width: 70%;
   background-color: rgb(21, 21, 29);
   padding: 20px;
-  opacity: 0.8;
+  opacity: 0.85;
   box-shadow: 20px 20px 20px rgb(21, 21, 29);
 }
 
@@ -43,6 +44,12 @@ h1 {
   font-family: "Recursive", sans-serif;
   font-size: x-large;
   color: rgb(51, 49, 180);
+}
+h2 {
+  font-family: "Recursive", sans-serif;
+  font-style: italic;
+  font-size: large;
+  color: rgb(149, 147, 236);
 }
 
 .clr-text {
@@ -136,4 +143,8 @@ img {
 }
 .font-cond-b {
   font-weight: 700 !important;
+}
+
+.place {
+  padding: 200px;
 }
