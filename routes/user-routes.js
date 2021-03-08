@@ -14,7 +14,7 @@ module.exports = (app) => {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
-      fav_locs: "1,3,5",
+      current_trip: req.body.trip,
     })
       .then(function () {
         console.log("Logging in");
@@ -44,7 +44,7 @@ module.exports = (app) => {
       // trip should be an array of ids (each id corresponding to a location) separated by commas w/o spaces
       // eg "1,3,5,6"
       res.json({
-        trip: req.user.trip,
+        current_trip: req.user.current_trip,
       });
     }
   });
