@@ -45,13 +45,14 @@ $(document).ready(function () {
         .then(() => {
           window.location.replace("/trip");
         })
+        .catch(handleExistsErr)
         
-        .catch(handleExistsErr);
+        
       }
       else{
         signUpUser(email, password, choices);
       }
-    })
+    }).catch(handleExistsErr);
   }
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
@@ -71,11 +72,12 @@ $(document).ready(function () {
 
   function handleLoginErr(err) {
     console.log("Error logging in");
+    
     $("#alert .msg").text(err.responseJSON);
   }
   
-  function handleExistsErr(){
+  function handleExistsErr(err){
     console.log("User already exists");
-    $("#alert .msg").text("That email is already in use.")
+    $("#alert .msg").text("That user exists!");
   }
 });
