@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "14.15.4"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -26,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/seff0/DUFullStackProject2/issues"
   },
-  "homepage": "https://github.com/seff0/DUFullStackProject2#readme"
+  "homepage": "https://github.com/seff0/DUFullStackProject2#readme",
+  "devDependencies": {}
 }

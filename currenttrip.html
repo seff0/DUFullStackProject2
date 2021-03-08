@@ -1,6 +1,6 @@
-<!-- <!DOCTYPE html>
-<html lang="en"> -->
-<!-- <head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,57 +11,109 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./public/assets/css/maggiecss.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
-      rel="stylesheet"
-    />
-  </head> -->
-<!-- <body> -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-          >Disabled</a
+    <link rel="stylesheet" href="./public/assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"
+          ><img src="./public/assets/images/galaxy_logo.png" alt="Galaxy logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><button type="submit" class="btn btn-primary" id="button">
+                  Book Your Trip!
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><button type="submit" class="btn btn-primary" id="button">
+                  Contact the Team
+                </button></a
+              >
+            </li> -->
+            <li>
+              <img
+                class="socialmedia"
+                src="./public/assets/images/instagram logo.jpg"
+                alt="Instagram logo"
+              />
+            </li>
+            <li>
+              <img
+                class="socialmedia"
+                src="./public/assets/images/facebook.jpg"
+                alt="Facebook logo"
+              />
+            </li>
+            <li>
+              <img
+                class="socialmedia"
+                src="./public/assets/images/twitter.png"
+                alt="Twitter logo"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <div class="clearfix">
+      <img
+        src="./public/assets/images/Ngc1999.jpg"
+        class="col-md-6 float-md-end mb-3 ms-md-3"
+        alt="..."
+        height="700px"
+        width="500px"
+      />
+
+      <p>
+        A paragraph of placeholder text. We're using it here to show the use of
+        the clearfix class. We're adding quite a few meaningless phrases here to
+        demonstrate how the columns interact here with the floated image.
+      </p>
+
+      <p>
+        As you can see the paragraphs gracefully wrap around the floated image.
+        Now imagine how this would look with some actual content in here, rather
+        than just this boring placeholder text that goes on and on, but actually
+        conveys no tangible information at. It simply takes up space and should
+        not really be read.
+      </p>
+
+      <p>
+        And yet, here you are, still persevering in reading this placeholder
+        text, hoping for some more insights, or some hidden easter egg of
+        content. A joke, perhaps. Unfortunately, there's none of that here.
+      </p>
     </div>
-  </div>
-</nav>
 
-<img class="logo" src="./public/assets/images/galaxy_logo.png" alt="" />
-<br />
+    <!-- <img
+      src="./public/assets/images/mars.jpg"
+      class="place"
+      width="200"
+      height="200"
+      alt=""
+    /> -->
 
-<p>First Stop: {{choice}}</p>
-
-<button class="fav">Favorite</button>
-<br />
-
-<button class="fav">Next Site!</button>
-
-<footer>
-  <nav class="navbar fixed-bottom navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Footer</a>
-    </div>
-  </nav>
-</footer>
-<!-- </body>
-</html> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
