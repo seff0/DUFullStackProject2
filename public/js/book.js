@@ -50,7 +50,7 @@ $(document).ready(function () {
         
       }
       else{
-        signUpUser(email, password, choices);
+        signUpUser(usemail, password, choices);
       }
     }).catch(handleExistsErr);
   }
