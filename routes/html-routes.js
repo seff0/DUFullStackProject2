@@ -21,31 +21,40 @@ module.exports = (router) => {
   });
 
   router.get("/trip", (req, res) => {
-    db.User.findAll({
-      raw: true,
-      where: {
-        email: req.user.email,
-      },
-    })
-      .then((data) => {
-        console.log(data);
-        queries = data[0].current_trip.split(",").map(Number);
-        return queries;
-      })
+    // db.User.findAll({
+    //   raw: true,
+    //   where: {
+    //     email: req.user.email,
+    //   },
+    // })
+    //   .then((data) => {
+    //     console.log(data);
+    //     queries = data[0].current_trip.split(",").map(Number);
+    //     return queries;
+    //   })
 
-      .then((queries) => {
-        db.Destination.findAll({
-          raw: true,
-          where: {
-            id: queries,
-          },
-        }).then((data) => {
-          const dataObj = {
-            destination: data,
-          };
-          res.render("trip", dataObj);
-        });
-      });
+    //   .then((queries) => {
+    //     db.Destination.findAll({
+    //       raw: true,
+    //       where: {
+    //         id: queries,
+    //       },
+    //     }).then((data) => {
+    //       const dataObj = {
+    //         destination: data,
+    //       };
+    //       res.render("trip", dataObj);
+    //     });
+    //   });
+
+    db.Destination.findAll({
+      raw: true,
+    }).then((data) => {
+      const dataObj = {
+        destination: data,
+      };
+      res.render("trip", dataObj);
+    });
   });
 
   router.get("/end", (req, res) => {
@@ -53,38 +62,36 @@ module.exports = (router) => {
   });
 
   router.get("/favorites", (req, res) => {
-    if(req.user){
-      
-    db.User.findAll({
-      raw: true,
-      where: {
-        email: req.user.email,
-      },
-    })
-      .then((data) => {
-        console.log(data);
-        queries = data[0].fav_locs.split(",").map(Number);
-        return queries;
+    if (req.user) {
+      db.User.findAll({
+        raw: true,
+        where: {
+          email: req.user.email,
+        },
       })
+        .then((data) => {
+          console.log(data);
+          queries = data[0].fav_locs.split(",").map(Number);
+          return queries;
+        })
 
-      .then((queries) => {
-        db.Destination.findAll({
-          raw: true,
-          where: {
-            id: queries,
-          },
-        }).then((data) => {
-          const dataObj = {
-            destination: data,
-          };
-          res.render("favorites", dataObj);
+        .then((queries) => {
+          db.Destination.findAll({
+            raw: true,
+            where: {
+              id: queries,
+            },
+          }).then((data) => {
+            const dataObj = {
+              destination: data,
+            };
+            res.render("favorites", dataObj);
+          });
         });
-      });
-  }
-  else {
-    res.redirect("/login");
-  }
-});
+    } else {
+      res.redirect("/login");
+    }
+  });
 
   router.get("/contact", (req, res) => {
     return res.render("contact");
