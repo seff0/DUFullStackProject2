@@ -5,11 +5,11 @@ See our app here!
 # Project Description
 
 Who doesn’t want to schedule either own trip to space? Galaxy Getaway users can login and schedule their own trip to space. They will choose locations to visit and then be able to virtually tour the locations.
-![Screenshot of Homepage](assets/images/one.png)
-![Screenshot of Selection Page](assets/images/one.png)
-![Screenshot of Trip Page](assets/images/one.png)
-![Screenshot of Contact Us](assets/images/one.png)
-![Screenshot of End Page](assets/images/one.png)
+![Screenshot of Homepage](assets/images/screen1.PNG)
+![Screenshot of Selection Page](assets/images/screen2.PNG)
+![Screenshot of Trip Page](assets/images/screen4.PNG)
+![Screenshot of Contact Us](assets/images/screen5.PNG)
+![Screenshot of End Page](assets/images/screen3.PNG)
 
 Homepage
 On the homepage users can see reviews and decide to book a trip ro contact the team.
