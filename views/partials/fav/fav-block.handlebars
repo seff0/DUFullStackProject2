@@ -1,0 +1,26 @@
+<div class="card mb-3" style="max-width: 100%">
+    <div class="row g-0">
+        <div class="col-lg-8">
+            <img src="{{img_link}}" alt="{{name}}" class="img-fluid">
+        </div>
+        <div class="col-lg-4">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text text-left">
+                    Distance from Earth: {{distance}} meters
+                    <br>
+                    Right Ascension: {{right_asc_h}}<sup>h</sup>{{right_asc_m}}<sup>m</sup>{{right_asc_s}}<sup>s</sup>
+                    <br>
+                    Declination: {{declination_d}}°{{declination_m}}<sup>m</sup>{{declination_s}}<sup>s</sup>
+                    <br>
+                    Radius: {{radius}} meters
+                    <br>
+                    {{description}}
+                    <br>
+                    <br>
+                    <a href="{{info_link}}" target="_blank">Read More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
