@@ -21,40 +21,33 @@ module.exports = (router) => {
   });
 
   router.get("/trip", (req, res) => {
-    // db.User.findAll({
-    //   raw: true,
-    //   where: {
-    //     email: req.user.email,
-    //   },
-    // })
-    //   .then((data) => {
-    //     console.log(data);
-    //     queries = data[0].current_trip.split(",").map(Number);
-    //     return queries;
-    //   })
-
-    //   .then((queries) => {
-    //     db.Destination.findAll({
-    //       raw: true,
-    //       where: {
-    //         id: queries,
-    //       },
-    //     }).then((data) => {
-    //       const dataObj = {
-    //         destination: data,
-    //       };
-    //       res.render("trip", dataObj);
-    //     });
-    //   });
-
-    db.Destination.findAll({
+    db.User.findAll({
       raw: true,
-    }).then((data) => {
-      const dataObj = {
-        destination: data,
-      };
-      res.render("trip", dataObj);
-    });
+      where: {
+        email: req.user.email,
+      },
+    })
+      .then((data) => {
+        console.log(data);
+        queries = data[0].current_trip.split(",").map(Number);
+        return queries;
+      })
+
+      .then((queries) => {
+        db.Destination.findAll({
+          raw: true,
+          where: {
+            id: queries,
+          },
+        }).then((data) => {
+          const dataObj = {
+            destination: data,
+          };
+          res.render("trip", dataObj);
+        });
+      });
+
+    
   });
 
   router.get("/end", (req, res) => {
