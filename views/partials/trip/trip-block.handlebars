@@ -9,16 +9,20 @@
                 <p class="card-text text-left">
                     Distance from Earth: {{distance}} meters
                     <br>
+                    <br>
                     Right Ascension: {{right_asc_h}}<sup>h</sup>{{right_asc_m}}<sup>m</sup>{{right_asc_s}}<sup>s</sup>
+                    <br>
                     <br>
                     Declination: {{declination_d}}°{{declination_m}}<sup>m</sup>{{declination_s}}<sup>s</sup>
                     <br>
+                    <br>
                     Radius: {{radius}} meters
+                    <br>
                     <br>
                     {{description}}
                     <br>
                     <br>
-                    <a href="{{info_link}}" target="_blank">Read More</a>
+                    <a href="{{info_link}}" target="_blank" class="read-more">Read More</a>
                 </p>
                 <input type="checkbox" name="check-fav" data-id="{{this.id}}" />
                 <label for="add">Save this to my favorites!</label>
