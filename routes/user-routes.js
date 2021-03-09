@@ -15,7 +15,6 @@ module.exports = (app) => {
       email: req.body.email,
       password: req.body.password,
       current_trip: req.body.trip,
-      fav_locs: "1,2,5,6",
     })
       .then(function () {
         console.log("Logging in");
@@ -28,35 +27,53 @@ module.exports = (app) => {
         res.status(401).json(err);
       });
   });
-  
-  //check if a user exists
-  app.post("/api/exists", function(req, res){
-      db.User.findAll(
-          {
-              where: {email: req.body.email}
-          }
-      ).then(data => {
-          if(data.length > 0){
-              res.json(true);
-          }
-          else{
-              res.json(false);
-          }
+
+  app.post("/api/favs", (req, res) => {
+    let values = { fav_locs: req.body.favs };
+    let selector = {
+      where: {
+        email: req.user.email,
+      },
+    };
+    db.User.update(values, selector)
+      .then(function () {
+        console.log("Favorite locations updated.");
+        res.redirect("/end");
       })
-  })
-  
+      .catch(function (err) {
+        console.log("Something went wrong in user-routes!");
+        console.log(err);
+        console.log(req.body);
+        res.status(401).json(err);
+      });
+  });
+
+  //check if a user exists
+  app.post("/api/exists", function (req, res) {
+    db.User.findAll({
+      where: { email: req.body.email },
+    }).then((data) => {
+      if (data.length > 0) {
+        res.json(true);
+      } else {
+        res.json(false);
+      }
+    });
+  });
+
   //update a user's trips
-  app.post("/api/update-trips", function(req, res){
-      console.log(req.body);
-      db.User.update(
-          {
-            current_trip: req.body.trip
-          },
-          {
-            where: {email: req.body.email},
-          })
-  })
-  
+  app.post("/api/update-trips", function (req, res) {
+    console.log(req.body);
+    db.User.update(
+      {
+        current_trip: req.body.trip,
+      },
+      {
+        where: { email: req.body.email },
+      }
+    );
+  });
+
   // Route for logging user out
   app.get("/logout", function (req, res) {
     req.logout();
