@@ -64,7 +64,10 @@ module.exports = (router) => {
       })
         .then((data) => {
           console.log(data);
-          queries = data[0].fav_locs.split(",").map(Number);
+          let queries = [];
+          if(data[0].fav_locs !== null){
+            queries = data[0].fav_locs.split(",").map(Number);
+          }
           return queries;
         })
 
