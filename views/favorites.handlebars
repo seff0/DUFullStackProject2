@@ -1,17 +1,19 @@
-<div class="favorites">
+<div class="container">
     <div class="divider">
         <h1>YOUR FAVORITE SPACE LOCATIONS</h1>
-        <div class="container">
-            <div class="row">
-                {{#each destination}}
-                {{> fav/fav-block}}
-                {{/each}}
-            </div>
-        </div>
     </div>
-</div>
-<div class="btnhelper">
-    <a href="/book">
-        <button class="btn btn-primary">Start another trip</button>
-    </a>
+    <div class="row">
+        {{!-- for each site selected should populate on the trip page --}}
+
+        {{#each destination}}
+        {{> fav/fav-block}}
+        {{/each}}
+
+    </div>
+    <br>
+    <div class="btnhelper">
+        <a href="/book">
+            <button class="btn btn-primary">Book another trip</button>
+        </a>
+    </div>
 </div>
