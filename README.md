@@ -1,6 +1,7 @@
 # DUFullStackProject2: Galaxy Getaway
 
-See our app here!
+See our app here! 
+Deployed at: https://galaxy-getaway.herokuapp.com/
 
 ## Project Description
 
